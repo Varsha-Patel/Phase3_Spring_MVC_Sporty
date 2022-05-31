@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http:/www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Insert title here</title>
+</head>
+<body>
+
+<h1>Search Purchases</h1>
+
+<form action="#" data-th-action="@{/PurchaseByCategory}" data-th-object="${categories}" method="post">
+	<select id="category" name="category"> 
+	<option value="">Select Category</option>
+	<option th:each="category : ${categories}" th:value="${category}" th:text="${category}"></option>
+	</select>
+    <button type="submit" name="action" value="searchByCategory">Search Purchases by Category</button>
+</form>
+<a th:href="@{Purchases}">List Purchases</a>
+<table>
+	<tr>
+    	<th>user</th>
+    	<th>productName</th>
+    	<th>productCategory</th>
+  </tr>
+	<tr th:each="purchase :${purchases}">
+		<td><span th:text="${purchase.user}"></span></td>
+		<td><span th:text="${purchase.productName}"></span></td>
+		<td><span th:text="${purchase.producCategory}"></span></td>
+	</tr>
+
+</table>
+
+</body>
+</html>

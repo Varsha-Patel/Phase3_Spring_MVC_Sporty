@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http:/www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Insert title here</title>
+</head>
+<body>
+
+<h1>List Purchases</h1>
+
+<table>
+	<tr>
+    	<th>User</th>
+    	<th>productName</th>
+    	<th>productCategory</th>
+    
+  </tr>
+	<tr th:each="purchase :${purchases}">
+		<td><span th:text="${purchase.user}"></span></td>
+		<td><span th:text="${purchase.productName}"></span></td>
+		<td><span th:text="${purchase.productCategory}"></span></td>
+	</tr>
+
+</table>
+</body>
+</html>

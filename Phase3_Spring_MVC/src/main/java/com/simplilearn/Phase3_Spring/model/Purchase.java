@@ -1,0 +1,36 @@
+package com.simplilearn.Phase3_Spring.model;
+
+
+public class Purchase {
+	
+	private int id;
+	private String user;
+	private String productName;
+	private String productCategory;
+	
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public String getUser() {
+		return user;
+	}
+	public void setUser(String user) {
+		this.user = user;
+	}
+	public String getProductName() {
+		return productName;
+	}
+	public void setProductName(String productName) {
+		this.productName = productName;
+	}
+	public String getProductCategory() {
+		return productCategory;
+	}
+	public void setProductCategory(String productCategory) {
+		this.productCategory = productCategory;
+	}
+	
+}
